@@ -1,0 +1,17 @@
+if (NOT DEFINED OSAL_PORT)
+    message(FATAL_ERROR "OSAL_PORT not defined")
+endif()
+
+set(
+    OSAL_SRC
+    ${OSAL_SRC}
+    ${CMAKE_CURRENT_SOURCE_DIR}/${OSAL_PORT}/osal.c
+)
+set(
+    OSAL_INC
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/${OSAL_PORT}
+)
+
+set(OSAL_SRC ${OSAL_SRC} PARENT_SCOPE)
+set(OSAL_INC ${OSAL_INC} PARENT_SCOPE)
