@@ -1,0 +1,13 @@
+set(
+    OSAL_SRC
+    ${OSAL_SRC}
+    ${CMAKE_CURRENT_SOURCE_DIR}/osal.c
+)
+set(
+    OSAL_INC
+    ${OSAL_INC}
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+set(OSAL_SRC ${OSAL_SRC} PARENT_SCOPE)
+set(OSAL_INC ${OSAL_INC} PARENT_SCOPE)
