@@ -32,8 +32,8 @@ SOFTWARE.
 
 os_task_t os_task_create(os_task_service_f service, const char *name, void *params, uint32_t stack_size, os_task_priority_t prio);
 
-void os_task_delay_tick(uint32_t tick);
-void os_task_delay_ms(uint32_t ms);
+void os_delay_tick(uint32_t tick);
+void os_delay_ms(uint32_t ms);
 
 os_queue_t os_queue_create(uint32_t capacity, uint32_t item_size);
 bool os_queue_send(os_queue_t, void *item, uint32_t wait_ms);

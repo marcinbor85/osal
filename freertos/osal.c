@@ -38,12 +38,12 @@ os_task_t os_task_create(os_task_service_f service, const char *name, void *para
         return task;
 }
 
-void os_task_delay_ms(uint32_t ms)
+void os_delay_ms(uint32_t ms)
 {
         vTaskDelay(ms / portTICK_RATE_MS);
 }
 
-void os_task_delay_tick(uint32_t tick)
+void os_delay_tick(uint32_t tick)
 {
         vTaskDelay(tick);
 }
